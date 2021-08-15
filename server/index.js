@@ -1,11 +1,11 @@
 import express from "express";
-import cors from"cors";  //!Cross orgin Request 
+import cors from"cors";  //!Cross Orgin Request 
 import helmet from "helmet" 
 
 const zomato=express();
 
 zomato.use(express.json());
-
+zomato.use(express.urlencoded({extended:false}));
 zomato.use(helmet());
 zomato.use(cors());
 
